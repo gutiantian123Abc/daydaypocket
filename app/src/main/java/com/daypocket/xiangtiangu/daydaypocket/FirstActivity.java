@@ -15,7 +15,7 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     public void signIn(View view) {
-        Intent goToNextActivity = new Intent(getApplicationContext(), SignInActivity.class);
+        Intent goToNextActivity = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(goToNextActivity);
 
     }

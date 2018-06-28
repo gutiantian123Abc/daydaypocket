@@ -18,6 +18,11 @@ android {
     }
     productFlavors {
     }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java/com/daypocket/xiangtiangu/daydaypocket/menu']
+        }
+    }
 }
 
 dependencies {
