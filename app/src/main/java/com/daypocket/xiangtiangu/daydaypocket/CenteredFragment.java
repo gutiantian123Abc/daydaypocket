@@ -2,6 +2,7 @@ package com.daypocket.xiangtiangu.daydaypocket;
 
 import android.app.Fragment;
 import android.os.Bundle;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,20 +50,16 @@ public class CenteredFragment extends Fragment {
             params.leftMargin = screenWidth / 4;
             payBtn.setLayoutParams(params);
             payBtn.setText("INVEST");
+            payBtn.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             frameLayout.addView(payBtn);
 
             Button borrowBtn = new Button(getActivity());
-
             params.topMargin = screenHeight / 3;
             params.leftMargin = screenWidth / 3;
             borrowBtn.setLayoutParams(params);
             borrowBtn.setText("BORROW");
+            borrowBtn.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             frameLayout.addView(borrowBtn);
-
-
-
-
-
 
         }
 
@@ -76,5 +73,6 @@ public class CenteredFragment extends Fragment {
     private int getScreenWeight() {
         return getResources().getDisplayMetrics().widthPixels;
     }
+
 
 }
