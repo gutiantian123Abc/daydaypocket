@@ -20,7 +20,7 @@ android {
     }
     sourceSets {
         main {
-            java.srcDirs = ['src/main/java', 'src/main/java/com/daypocket/xiangtiangu/daydaypocket/menu']
+            java.srcDirs = ['src/main/java', 'src/main/java/com/daypocket/xiangtiangu/daydaypocket/menu', 'src/main/java/com/daypocket/xiangtiangu/daydaypocket/fragment', 'src/main/java/com/daypocket/xiangtiangu/daydaypocket/activity']
         }
     }
 }

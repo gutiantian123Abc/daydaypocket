@@ -1,9 +1,9 @@
 package com.daypocket.xiangtiangu.daydaypocket;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 public class FirstActivity extends AppCompatActivity {
 
