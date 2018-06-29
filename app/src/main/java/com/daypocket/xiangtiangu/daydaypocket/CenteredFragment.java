@@ -8,6 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
+import android.util.DisplayMetrics;
+import android.view.WindowManager;
+
 
 
 /**
@@ -32,14 +36,45 @@ public class CenteredFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         String text = getArguments().getString(EXTRA_TEXT);
         FrameLayout frameLayout = (FrameLayout) rootView.findViewById(R.id.fragment_main_layout);
+        int screenWidth = getScreenWeight();
+        int screenHeight = getScreenHeight();
+
+
 
         if(text.equals("Dashboard")) {
-            Button button = new Button(getActivity());
-            button.setText(text);
-            frameLayout.addView(button);
+            Button payBtn = new Button(getActivity());
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT);
+            params.topMargin = screenHeight / 4;
+            params.leftMargin = screenWidth / 4;
+            payBtn.setLayoutParams(params);
+            payBtn.setText("INVEST");
+            frameLayout.addView(payBtn);
+
+            Button borrowBtn = new Button(getActivity());
+
+            params.topMargin = screenHeight / 3;
+            params.leftMargin = screenWidth / 3;
+            borrowBtn.setLayoutParams(params);
+            borrowBtn.setText("BORROW");
+            frameLayout.addView(borrowBtn);
+
+
+
+
+
+
         }
 
         return rootView;
+    }
+
+    private int getScreenHeight() {
+        return getResources().getDisplayMetrics().heightPixels;
+    }
+
+    private int getScreenWeight() {
+        return getResources().getDisplayMetrics().widthPixels;
     }
 
 }
