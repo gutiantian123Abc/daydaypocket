@@ -19,7 +19,7 @@ import android.view.WindowManager;
  * Created by yarolegovich on 25.03.2017.
  */
 
-public class CenteredFragment extends Fragment {
+public class InvestFragment extends Fragment {
 
     private static final String EXTRA_TEXT = "text";
 
@@ -56,7 +56,7 @@ public class CenteredFragment extends Fragment {
             params.topMargin = screenHeight / 4;
             params.leftMargin = screenWidth / 4;
             investBtn.setLayoutParams(params);
-            investBtn.setText("INVEST");
+            investBtn.setText("Apply");
             investBtn.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             investBtn.setOnClickListener(new Button.OnClickListener() {
                 public void onClick(View v) {
@@ -71,7 +71,7 @@ public class CenteredFragment extends Fragment {
             params.topMargin = screenHeight / 3;
             params.leftMargin = screenWidth / 3;
             borrowBtn.setLayoutParams(params);
-            borrowBtn.setText("BORROW");
+            borrowBtn.setText("Shit");
             borrowBtn.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
             borrowBtn.setOnClickListener(new Button.OnClickListener() {
                 public void onClick(View v) {

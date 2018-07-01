@@ -20,7 +20,7 @@ import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 import java.util.Arrays;
 
 
-public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnItemSelectedListener{
+public class InvestActivity extends AppCompatActivity implements DrawerAdapter.OnItemSelectedListener{
     private static final int POS_DASHBOARD = 0;
     private static final int POS_ACCOUNT = 1;
     private static final int POS_MESSAGES = 2;
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements DrawerAdapter.OnI
             finish();
         }
         slidingRootNav.closeMenu();
-        Fragment selectedScreen = CenteredFragment.createFor(screenTitles[position]);
+        Fragment selectedScreen = InvestFragment.createFor(screenTitles[position]);
         showFragment(selectedScreen);
     }
 
