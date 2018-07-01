@@ -3,7 +3,14 @@ package com.daypocket.xiangtiangu.daydaypocket;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
+
+import java.io.IOException;
 
 public class FirstActivity extends AppCompatActivity {
 
@@ -16,8 +23,7 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     public void signIn(View view) {
-        Intent goToNextActivity = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(goToNextActivity);
-
+        Intent intent = new Intent(getBaseContext(), SignInActivity.class);
+        startActivity(intent);
     }
 }
