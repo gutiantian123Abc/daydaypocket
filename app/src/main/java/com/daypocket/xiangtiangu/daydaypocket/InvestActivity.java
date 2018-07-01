@@ -8,7 +8,8 @@ public class InvestActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_borrow);
+        setContentView(R.layout.activity_invest);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 
 

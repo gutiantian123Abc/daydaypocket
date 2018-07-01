@@ -52,8 +52,6 @@ public class SignInActivity extends AppCompatActivity {
                                 JsonElement jsonElement = jsonObject.get("user");
                                 String pass = jsonElement.getAsJsonArray().get(0).getAsJsonObject().get("password").toString();
 
-
-
                                 if(util.equal(password.getText().toString(), pass)) {
                                     Intent intent = new Intent(getBaseContext(), MainActivity.class);
 

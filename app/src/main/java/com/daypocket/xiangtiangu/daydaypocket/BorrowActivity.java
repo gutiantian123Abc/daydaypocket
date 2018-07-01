@@ -9,5 +9,6 @@ public class BorrowActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_borrow);
+        overridePendingTransition(R.anim.fadein, R.anim.fadeout);
     }
 }
