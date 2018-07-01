@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.view.View;
 import android.util.Log;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.koushikdutta.ion.Ion;
 import com.koushikdutta.async.future.FutureCallback;
@@ -46,8 +49,13 @@ public class SignInActivity extends AppCompatActivity {
                             if (!result.has("status")) {
                                 Log.i("util password ", password.toString());
 
+
                                 JsonObject jsonObject = result.getAsJsonObject();
-                                Log.i("input password", jsonObject.toString());
+                                JsonElement jsonElement = jsonObject.get("user");
+                                Log.i("Tag", jsonElement.toString());
+
+
+                                
                                 if(util.equal(password.getText().toString(), jsonObject.get("password").toString())) {
                                     Intent intent = new Intent(getBaseContext(), MainActivity.class);
 
