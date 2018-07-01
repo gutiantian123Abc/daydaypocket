@@ -47,22 +47,21 @@ public class SignInActivity extends AppCompatActivity {
                             Util util = new Util();
 
                             if (!result.has("status")) {
-                                Log.i("util password ", password.toString());
-
 
                                 JsonObject jsonObject = result.getAsJsonObject();
                                 JsonElement jsonElement = jsonObject.get("user");
-                                Log.i("Tag", jsonElement.toString());
+                                String pass = jsonElement.getAsJsonArray().get(0).getAsJsonObject().get("password").toString();
 
 
-                                
-                                if(util.equal(password.getText().toString(), jsonObject.get("password").toString())) {
+
+                                if(util.equal(password.getText().toString(), pass)) {
                                     Intent intent = new Intent(getBaseContext(), MainActivity.class);
 
                                     startActivity(intent);
                                 }else {
                                     // More security credential checks needed here
                                     Log.i("Wrong password", password.getText().toString());
+                                    Log.i("Should be", pass);
                                 }
                             }else {
                                 Log.i("Wrong username", username.getText().toString());
