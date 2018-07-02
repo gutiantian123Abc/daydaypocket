@@ -35,11 +35,12 @@
     <com.jjoe64.graphview.GraphView
         android:id="@+id/graph"
         android:layout_width="0dp"
-        android:layout_height="297dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/keepInvestBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/balance" />
 
     <Button
         android:id="@+id/keepInvestBtn"
@@ -55,7 +56,7 @@
         android:id="@+id/redeem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="24dp"
         android:background="@android:color/background_dark"
         android:onClick="redeem"
         android:text="Redeem"

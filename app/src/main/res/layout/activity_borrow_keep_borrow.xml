@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".BorrowKeepBorrowActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:hint="Name"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/background_dark" />
+
+        <EditText
+            android:id="@+id/Age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:hint="Age"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/background_dark" />
+
+        <EditText
+            android:id="@+id/Job"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:hint="Current Job"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/background_dark" />
+
+        <EditText
+            android:id="@+id/Income"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:hint="Current Income"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/background_dark" />
+
+        <EditText
+            android:id="@+id/Phone_Number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:hint="Phone Number"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/background_dark" />
+
+        <EditText
+            android:id="@+id/SSN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:hint="SSN"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/background_dark" />
+
+        <EditText
+            android:id="@+id/Passport_Number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:hint="Passport Number"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/background_dark" />
+
+        <Button
+            android:id="@+id/Apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/screen_background_dark"
+            android:onClick="pay"
+            android:text="Apply"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="127dp" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/screen_background_dark"
+            android:onClick="cancel"
+            android:text="Cancel"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="127dp" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.7"
+        android:padding="5dp"
+        android:text="Day Pocket"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.474" />
+
+
+</android.support.constraint.ConstraintLayout>
