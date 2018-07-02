@@ -75,8 +75,8 @@ public class BorrowActivity extends AppCompatActivity {
         graph.getLegendRenderer().setVisible(true);
         graph.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
         graph.getGridLabelRenderer().setGridColor(Color.argb(255, 0, 0, 0));
-        graph.getGridLabelRenderer().setVerticalLabelsColor(Color.argb(255, 0, 0, 0));
-        graph.getGridLabelRenderer().setHorizontalLabelsColor(Color.argb(255, 0, 0, 0));
+        graph.getGridLabelRenderer().setVerticalLabelsColor(Color.argb(255, 255, 0, 0));
+        graph.getGridLabelRenderer().setHorizontalLabelsColor(Color.argb(255, 255, 0, 0));
         graph.getGridLabelRenderer().setTextSize(60);
 
         graph.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter() {
@@ -100,7 +100,7 @@ public class BorrowActivity extends AppCompatActivity {
     }
 
     public void pay(View view) {
-        Intent intent = new Intent(getApplicationContext(), RedeemGetActivity.class);
+        Intent intent = new Intent(getApplicationContext(), BorrowPaySelectActivity.class);
         startActivity(intent);
     }
 

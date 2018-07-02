@@ -6,4 +6,6 @@
 
     <color name="textColorPrimary">#000000</color>
     <color name="textColorSecondary">#cc0000</color>
+    <color name="Cool">#1865e0</color>
+    <color name="TrueRed">#ff0000</color>
 </resources>
