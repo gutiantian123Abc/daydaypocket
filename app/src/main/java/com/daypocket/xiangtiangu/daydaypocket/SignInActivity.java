@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.view.View;
 import android.util.Log;
-
-import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.koushikdutta.ion.Ion;
@@ -17,6 +15,7 @@ import java.io.IOException;
 public class SignInActivity extends AppCompatActivity {
     private EditText username;
     private EditText password;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
