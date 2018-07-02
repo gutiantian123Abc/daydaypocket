@@ -8,29 +8,38 @@
     tools:context=".InvestActivity"
     tools:layout_editor_absoluteY="25dp">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:title="DayPocket" />
+
     <TextView
         android:id="@+id/balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="20dp"
         android:padding="20dp"
         android:textColor="@color/Cool"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/graph"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <com.jjoe64.graphview.GraphView
         android:id="@+id/graph"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="6dp"
-        app:layout_constraintBottom_toTopOf="@+id/keepInvestBtn"
+        android:layout_height="297dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/balance" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/keepInvestBtn"
@@ -40,19 +49,18 @@
         android:onClick="invest"
         android:text="Invest"
         app:layout_constraintBottom_toTopOf="@+id/redeem"
-        app:layout_constraintStart_toStartOf="@+id/redeem"
-        app:layout_constraintTop_toBottomOf="@+id/graph" />
+        app:layout_constraintStart_toStartOf="@+id/redeem" />
 
     <Button
         android:id="@+id/redeem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="40dp"
         android:background="@android:color/background_dark"
         android:onClick="redeem"
         android:text="Redeem"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/keepInvestBtn" />
+        app:layout_constraintStart_toStartOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

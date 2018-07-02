@@ -15,6 +15,7 @@ import com.jjoe64.graphview.DefaultLabelFormatter;
 import com.jjoe64.graphview.series.OnDataPointTapListener;
 import com.jjoe64.graphview.series.Series;
 import android.view.View;
+import android.support.v7.widget.Toolbar;
 
 public class InvestActivity extends AppCompatActivity {
 
@@ -28,6 +29,18 @@ public class InvestActivity extends AppCompatActivity {
         Bundle data = getIntent().getExtras();
         balance = (TextView)findViewById(R.id.balance);
         balance.setText("Current Balance $" + data.get("Payamount").toString());
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // back button pressed
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
         GraphView graph = (GraphView) findViewById(R.id.graph);
 

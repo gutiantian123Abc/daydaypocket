@@ -14,7 +14,7 @@
         android:layout_centerInParent="true"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -70,6 +70,16 @@
             android:background="@android:drawable/screen_background_dark"
             android:onClick="pay"
             android:text="Invest"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="127dp" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/screen_background_dark"
+            android:onClick="cancel"
+            android:text="cancel"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="127dp" />
 
