@@ -50,6 +50,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/background_dark"
+        android:onClick="borrow"
         android:text="Borrow"
         app:layout_constraintBottom_toTopOf="@+id/pay"
         app:layout_constraintStart_toStartOf="@+id/pay"

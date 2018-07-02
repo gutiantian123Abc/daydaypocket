@@ -23,7 +23,8 @@
         <activity android:name=".InvestPayActivity" />
         <activity android:name=".RedeemGetActivity" />
         <activity android:name=".BorrowPaySelectActivity" />
-        <activity android:name=".BorrowKeepBorrowActivity"></activity>
+        <activity android:name=".BorrowKeepBorrowActivity" />
+        <activity android:name=".KeepBorrowPayActivity"></activity>
     </application>
 
 </manifest>

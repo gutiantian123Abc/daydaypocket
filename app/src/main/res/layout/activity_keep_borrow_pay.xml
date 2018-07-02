@@ -5,21 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".BorrowKeepBorrowActivity">
+    tools:context=".KeepBorrowPayActivity"
+    tools:layout_editor_absoluteY="25dp">
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginTop="28dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@+id/maxBorrowBalance">
+
 
         <EditText
-            android:id="@+id/Name"
+            android:id="@+id/cardNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:hint="Bank Account Number"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@android:color/background_dark" />
+
+        <EditText
+            android:id="@+id/nameOnCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="18dp"
@@ -28,66 +39,31 @@
             android:textColorHint="@android:color/background_dark" />
 
         <EditText
-            android:id="@+id/Age"
+            android:id="@+id/CSV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="18dp"
-            android:hint="Age"
+            android:hint="Routing Number"
             android:textColor="@android:color/background_dark"
             android:textColorHint="@android:color/background_dark" />
 
-        <EditText
-            android:id="@+id/Job"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            android:hint="Current Job"
-            android:textColor="@android:color/background_dark"
-            android:textColorHint="@android:color/background_dark" />
 
         <EditText
-            android:id="@+id/Income"
+            android:id="@+id/payAmount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="18dp"
-            android:hint="Current Income"
-            android:textColor="@android:color/background_dark"
-            android:textColorHint="@android:color/background_dark" />
-
-        <EditText
-            android:id="@+id/Phone_Number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            android:hint="Phone Number"
-            android:textColor="@android:color/background_dark"
-            android:textColorHint="@android:color/background_dark" />
-
-        <EditText
-            android:id="@+id/SSN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            android:hint="SSN"
-            android:textColor="@android:color/background_dark"
-            android:textColorHint="@android:color/background_dark" />
-
-        <EditText
-            android:id="@+id/Passport_Number"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="18dp"
-            android:hint="Passport Number"
+            android:hint="Borrow Amount"
             android:textColor="@android:color/background_dark"
             android:textColorHint="@android:color/background_dark" />
 
         <Button
-            android:id="@+id/applyBorrow"
+            android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:drawable/screen_background_dark"
-            android:onClick="applyBorrow"
-            android:text="Apply"
+            android:onClick="pay"
+            android:text="Submit"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="127dp" />
 
@@ -97,7 +73,7 @@
             android:layout_height="wrap_content"
             android:background="@android:drawable/screen_background_dark"
             android:onClick="cancel"
-            android:text="Cancel"
+            android:text="cancel"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="127dp" />
 
@@ -108,16 +84,40 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="246dp"
         android:alpha="0.7"
         android:padding="5dp"
         android:text="Day Pocket"
         android:textColor="@android:color/white"
         android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.474" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Your Borrw Line"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/maxBorrowBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
 
 </android.support.constraint.ConstraintLayout>

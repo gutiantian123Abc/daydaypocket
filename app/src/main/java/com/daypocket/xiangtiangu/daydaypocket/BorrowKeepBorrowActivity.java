@@ -1,7 +1,9 @@
 package com.daypocket.xiangtiangu.daydaypocket;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class BorrowKeepBorrowActivity extends AppCompatActivity {
 
@@ -13,5 +15,10 @@ public class BorrowKeepBorrowActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public void applyBorrow(View view) {
+        Intent intent = new Intent(getBaseContext(), KeepBorrowPayActivity.class);
+        startActivity(intent);
     }
 }

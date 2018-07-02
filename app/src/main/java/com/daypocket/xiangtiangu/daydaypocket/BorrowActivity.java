@@ -107,7 +107,7 @@ public class BorrowActivity extends AppCompatActivity {
 
 
     public void borrow(View view) {
-        Intent intent = new Intent(getApplicationContext(), InvestPayActivity.class);
+        Intent intent = new Intent(getApplicationContext(), BorrowKeepBorrowActivity.class);
         startActivity(intent);
     }
 
