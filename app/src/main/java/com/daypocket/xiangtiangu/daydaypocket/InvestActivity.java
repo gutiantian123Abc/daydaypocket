@@ -40,18 +40,25 @@ public class InvestActivity extends AppCompatActivity {
                     new DataPoint(4, 539),
                     new DataPoint(5, 543)
             });
+        }else if(data.get("Payamount").toString().equals("800")) {
+            series = new LineGraphSeries<DataPoint>(new DataPoint[] {
+                    new DataPoint(1, 800),
+                    new DataPoint(2, 812),
+                    new DataPoint(3, 823),
+                    new DataPoint(4, 843),
+                    new DataPoint(5, 848)
+            });
+
         }else {
             series = new LineGraphSeries<DataPoint>(new DataPoint[] {
-                    new DataPoint(1, 300),
-                    new DataPoint(2, 312),
-                    new DataPoint(3, 323),
-                    new DataPoint(4, 343),
-                    new DataPoint(5, 348)
+                    new DataPoint(1, 200),
+                    new DataPoint(2, 222),
+                    new DataPoint(3, 230),
+                    new DataPoint(4, 253),
+                    new DataPoint(5, 260)
             });
 
         }
-
-
 
         series.setTitle("Income Expectation");
         series.setDrawDataPoints(true);
@@ -88,6 +95,11 @@ public class InvestActivity extends AppCompatActivity {
 
     public void invest(View view) {
         Intent intent = new Intent(getApplicationContext(), InvestPayActivity.class);
+        startActivity(intent);
+    }
+
+    public void redeem(View view) {
+        Intent intent = new Intent(getApplicationContext(), RedeemGetActivity.class);
         startActivity(intent);
     }
 
