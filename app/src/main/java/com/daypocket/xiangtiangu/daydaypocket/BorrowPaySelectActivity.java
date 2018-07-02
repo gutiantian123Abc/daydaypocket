@@ -22,7 +22,7 @@ public class BorrowPaySelectActivity extends AppCompatActivity {
 
     public void pay(View view) {
         Intent intent = new Intent(getBaseContext(), BorrowActivity.class);
-        intent.putExtra("Payamount", 500);
+        intent.putExtra("Payamount", 200);
         startActivity(intent);
     }
 }
