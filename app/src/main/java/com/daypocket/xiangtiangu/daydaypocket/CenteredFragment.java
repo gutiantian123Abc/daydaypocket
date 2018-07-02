@@ -32,6 +32,7 @@ public class CenteredFragment extends Fragment {
     }
     private void invest() {
         Intent intent = new Intent(getActivity(), InvestActivity.class);
+        intent.putExtra("Payamount", 500);
         startActivity(intent);
     }
 

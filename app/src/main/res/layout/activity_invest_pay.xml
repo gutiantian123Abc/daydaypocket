@@ -68,6 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:drawable/screen_background_dark"
+            android:onClick="pay"
             android:text="Invest"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="127dp" />

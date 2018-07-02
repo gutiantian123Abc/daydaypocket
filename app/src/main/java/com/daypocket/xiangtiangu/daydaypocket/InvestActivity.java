@@ -25,18 +25,34 @@ public class InvestActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invest);
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
+        Bundle data = getIntent().getExtras();
         balance = (TextView)findViewById(R.id.balance);
-        balance.setText("Current Balance $500");
-
+        balance.setText("Current Balance $" + data.get("Payamount").toString());
 
         GraphView graph = (GraphView) findViewById(R.id.graph);
-        LineGraphSeries<DataPoint> series = new LineGraphSeries<DataPoint>(new DataPoint[] {
-                new DataPoint(1, 500),
-                new DataPoint(2, 512),
-                new DataPoint(3, 528),
-                new DataPoint(4, 539),
-                new DataPoint(5, 543)
-        });
+
+        LineGraphSeries<DataPoint> series;
+        if(data.get("Payamount").toString().equals("500")) {
+            series = new LineGraphSeries<DataPoint>(new DataPoint[] {
+                    new DataPoint(1, 500),
+                    new DataPoint(2, 512),
+                    new DataPoint(3, 528),
+                    new DataPoint(4, 539),
+                    new DataPoint(5, 543)
+            });
+        }else {
+            series = new LineGraphSeries<DataPoint>(new DataPoint[] {
+                    new DataPoint(1, 300),
+                    new DataPoint(2, 312),
+                    new DataPoint(3, 323),
+                    new DataPoint(4, 343),
+                    new DataPoint(5, 348)
+            });
+
+        }
+
+
+
         series.setTitle("Income Expectation");
         series.setDrawDataPoints(true);
         series.setDrawBackground(true);
