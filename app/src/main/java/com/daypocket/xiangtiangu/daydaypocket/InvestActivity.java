@@ -1,5 +1,6 @@
 package com.daypocket.xiangtiangu.daydaypocket;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import com.jjoe64.graphview.GraphView;
@@ -13,7 +14,7 @@ import com.jjoe64.graphview.LegendRenderer;
 import com.jjoe64.graphview.DefaultLabelFormatter;
 import com.jjoe64.graphview.series.OnDataPointTapListener;
 import com.jjoe64.graphview.series.Series;
-
+import android.view.View;
 
 public class InvestActivity extends AppCompatActivity {
 
@@ -66,10 +67,12 @@ public class InvestActivity extends AppCompatActivity {
                 }
             }
         });
+    }
 
 
-
-
+    public void invest(View view) {
+        Intent intent = new Intent(getApplicationContext(), InvestPayActivity.class);
+        startActivity(intent);
     }
 
 
