@@ -13,11 +13,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="28dp"
+        android:layout_marginBottom="128dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/maxBorrowBalance">
+        app:layout_constraintTop_toBottomOf="@+id/maxBorrowBalance">
 
 
         <EditText
@@ -62,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@android:drawable/screen_background_dark"
-            android:onClick="pay"
+            android:onClick="borrow"
             android:text="Submit"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="127dp" />
@@ -84,24 +85,27 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="246dp"
+        android:layout_marginBottom="268dp"
         android:alpha="0.7"
         android:padding="5dp"
         android:text="Day Pocket"
         android:textColor="@android:color/white"
         android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/borrowRate" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="41dp"
         android:layout_marginTop="16dp"
         android:text="Your Borrw Line"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/borrowRate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -109,14 +113,28 @@
     <TextView
         android:id="@+id/maxBorrowBalance"
         android:layout_width="wrap_content"
-        android:layout_height="37dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="4dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="23dp"
         android:text="TextView"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/borrowRate"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="120dp"
+        android:layout_marginStart="8dp"
+        android:text="Rate ~7%"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/maxBorrowBalance"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
 

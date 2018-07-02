@@ -21,4 +21,11 @@ public class BorrowKeepBorrowActivity extends AppCompatActivity {
         Intent intent = new Intent(getBaseContext(), KeepBorrowPayActivity.class);
         startActivity(intent);
     }
+
+    public void cancel(View view) {
+        Intent intent = new Intent(getApplicationContext(), BorrowActivity.class);
+        intent.putExtra("Payamount", 500);
+        startActivity(intent);
+
+    }
 }
