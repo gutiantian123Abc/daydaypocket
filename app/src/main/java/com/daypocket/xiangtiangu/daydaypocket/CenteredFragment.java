@@ -38,6 +38,7 @@ public class CenteredFragment extends Fragment {
 
     private void borrow() {
         Intent intent = new Intent(getActivity(), BorrowActivity.class);
+        intent.putExtra("Payamount", 500);
         startActivity(intent);
     }
     @Nullable
