@@ -19,4 +19,10 @@ public class BorrowPaySelectActivity extends AppCompatActivity {
         intent.putExtra("Payamount", 500);
         startActivity(intent);
     }
+
+    public void pay(View view) {
+        Intent intent = new Intent(getBaseContext(), BorrowActivity.class);
+        intent.putExtra("Payamount", 500);
+        startActivity(intent);
+    }
 }

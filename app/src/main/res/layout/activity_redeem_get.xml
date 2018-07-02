@@ -73,6 +73,16 @@
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="127dp" />
 
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/screen_background_dark"
+            android:onClick="cancel"
+            android:text="Cancel"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="127dp" />
+
 
     </LinearLayout>
 

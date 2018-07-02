@@ -19,4 +19,10 @@ public class RedeemGetActivity extends AppCompatActivity {
         intent.putExtra("Payamount", 200);
         startActivity(intent);
     }
+
+    public void cancel(View view) {
+        Intent intent = new Intent(getApplicationContext(), InvestActivity.class);
+        intent.putExtra("Payamount", 500);
+        startActivity(intent);
+    }
 }
